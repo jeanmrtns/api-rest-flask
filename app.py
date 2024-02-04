@@ -52,6 +52,7 @@ def delete_task(id: str):
     for task in tasks:
         if task.id == id:
             tasks.remove(task)
+            break
     
     return jsonify({
         "message": "Task deleted"
